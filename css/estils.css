@@ -1,0 +1,91 @@
+/* Els dos trucs, a dalt de tot */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;            /* 1rem = 10px */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Les variables */
+:root {
+  --principal: #1750a1;
+  --fons: #f3f1ec;
+}
+
+body {
+  font-size: 1.6rem;           /* 16px */
+  background-color: var(--fons);
+}
+
+header {
+  background-color: var(--principal);
+  color: white;
+}
+
+h1 { font-size: 3.2rem; }      /* 32px */
+h2 { font-size: 2.4rem; }      /* 24px */
+
+/* El menú: selector descendent, sense classes */
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+article {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+  position: relative;          /* el pare del segell */
+  margin: 0 auto;/*centar*/
+}
+
+/* El segell: el fill */
+.nou {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 4px 10px;
+  background-color: #2e7d32;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+/* Extra, no es demanava: que la foto no surti de l'article */
+article img {
+  width: 100%;
+}
+
+main{
+  padding: 20px 16p 0;
+  margin-top: 1%;
+}
+.eslogan{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .eslogan{
+    display: block;
+  }
+  
+  nav li{
+    display: inline-block ;
+  }
+  
+  article{
+    display: inline-block;
+    width: 48%;
+    margin-top: 1%;
+  }
+}
